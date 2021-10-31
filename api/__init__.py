@@ -11,6 +11,7 @@ from .config import config, DevelopmentConfig, ProductionConfig
 from flask_marshmallow import Marshmallow
 from flask_mail import Mail
 from datetime import timedelta
+from flask_cors import CORS
 
 
 # TOKEN EXPIRY TIME
@@ -24,6 +25,7 @@ db = SQLAlchemy(app)
 ma = Marshmallow(app)
 jwt = JWTManager(app)
 mail = Mail(app)
+cors = CORS(app)
 
 # APP FACTORY
 def create_app(config_name):
@@ -38,6 +40,7 @@ def create_app(config_name):
     jwt.init_app(app)
     mail.init_app(app)
     Bcrypt.init_app(Bcrypt, app=app)
+    cors.init_app(app)
 
     # REGISTRATION OF BLUEPRINTS
     from api.crud import main as main_blueprint
