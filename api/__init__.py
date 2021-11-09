@@ -19,7 +19,7 @@ ACCESS_EXPIRES = timedelta(hours=24)
 
 # APP CONFIG
 app = Flask(__name__)
-app.config.from_object(DevelopmentConfig)
+app.config.from_object(ProductionConfig)
 
 db = SQLAlchemy(app)
 ma = Marshmallow(app)

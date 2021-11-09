@@ -12,9 +12,7 @@ from api import db, jwt, mail, ACCESS_EXPIRES
 from flask_mail import Message
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required, get_jwt
 
-
 main = Blueprint('main', __name__)
-
 
 # FUNCTION TO SEND MAIL
 def send_email(to_email, subject, body):

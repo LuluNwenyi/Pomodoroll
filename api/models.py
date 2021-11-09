@@ -9,7 +9,6 @@ from marshmallow import Schema
 from dataclasses import dataclass
 
 
-
 # USER TABLES
 class User(db.Model):
 
