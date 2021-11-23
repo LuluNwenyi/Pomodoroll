@@ -1,6 +1,5 @@
-###########################################
-################ IMPORTS ##################
-###########################################
+#----- IMPORTS -----#
+
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -11,7 +10,6 @@ from .config import config
 from flask_mail import Mail
 from datetime import timedelta
 from flask_cors import CORS
-
 
 # TOKEN EXPIRY TIME
 ACCESS_EXPIRES = timedelta(hours=24)

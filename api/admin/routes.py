@@ -1,6 +1,5 @@
+#----- IMPORTS -----#
 
-
-import datetime
 from flask import Blueprint, jsonify, request
 from flask_bcrypt import generate_password_hash
 from api.models import User

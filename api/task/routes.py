@@ -1,6 +1,4 @@
-##############################################
-################# IMPORTS ####################
-##############################################
+#----- IMPORTS -----#
 
 from flask import Blueprint, jsonify, request
 from api.models import Task

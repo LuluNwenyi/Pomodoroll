@@ -1,7 +1,4 @@
-##############################################
-################# IMPORTS ####################
-##############################################
-
+#----- IMPORTS -----#
 
 import datetime
 from flask import Blueprint, jsonify, request, make_response, url_for, abort, current_app

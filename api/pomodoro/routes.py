@@ -1,6 +1,4 @@
-##############################################
-################# IMPORTS ####################
-##############################################
+#----- IMPORTS -----#
 
 from flask import Blueprint, jsonify
 from api.models import Timer
