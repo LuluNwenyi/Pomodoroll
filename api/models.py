@@ -3,10 +3,6 @@
 ###########################################
 
 from api import db
-from flask_bcrypt import Bcrypt
-from flask_marshmallow import Marshmallow
-from marshmallow import Schema
-from dataclasses import dataclass
 
 
 # USER TABLES
@@ -29,26 +25,6 @@ class User(db.Model):
     db.create_all()
 
 
-
-# USER DATACLASS
-@dataclass
-class UserData:
-
-    email: str
-    username: str
-    password: str
-
-
-# USER SCHEMA
-class UserDataSchema(Schema):
-    class Meta:
-        fields = ('username', 'email', 'password')
-
-user_schema = UserDataSchema()
-users_schema =UserDataSchema(many=True)
-
-
-
 # TASK TABLES   
 class Task(db.Model):
     
@@ -64,17 +40,6 @@ class Task(db.Model):
         return f'{self.id} {self.task} {self.complete}'
 
     db.create_all()
-
-
-
-# TASK SCHEMA
-class TaskDataSchema(Schema):
-    class Meta:
-        fields = ('tasks', 'complete')
-
-task_schema = TaskDataSchema()
-tasks_schema =TaskDataSchema(many=True)
-
 
 
 # TOKEN BLOCKLIST
