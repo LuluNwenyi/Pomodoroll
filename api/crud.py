@@ -4,7 +4,6 @@ from flask import Blueprint, jsonify
 
 default = Blueprint('default', __name__)
 
-
 # HOME PAGE
 @default.route('/')
 def index():
