@@ -2,7 +2,6 @@
 
 from api import db
 
-
 # USER TABLES
 class User(db.Model):
 
